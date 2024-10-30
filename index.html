@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Plateforme de Vote</title>
+    <style>
+        /* Ajout d'un style simple */
+        #finalNotification, #thankYouMessage {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- Titre de l'Article et Contenu -->
+<h1 id="articleTitle">Titre de l'Article</h1>
+<p id="articleContent">Contenu de l'Article</p>
+
+<!-- Boutons d'opinion -->
+<button  type="button" class="btn btn-primary" id="agreeButton">D'accord</button>
+<button type="button" class="btn btn-danger" id="disagreeButton">Pas d'accord</button>
+
+<!-- Section Résumé de l’Opinion Global -->
+<h2 id="summaryTitle"></h2>
+<div id="finalNotification">
+    <p  id="agreePercentage"></p>
+    <p id="disagreePercentage"></p>
+
+    <!-- Formulaire pour le vote final et le commentaire -->
+    <form id="finalVoteForm">
+        <label for="vote">Vote final :</label>
+        <select name="vote" id="vote" required>
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+        </select>
+        <br><br>
+        <label for="comment">Commentaire :</label>
+        <textarea name="comment" id="comment" rows="4" cols="50" placeholder="Partagez votre opinion finale"></textarea>
+        <br><br>
+        <button type="submit">Soumettre votre avis</button>
+    </form>
+</div>
+
+<!-- Message de Remerciement après le Vote Final -->
+<div id="thankYouMessage">
+    <p>Merci d'avoir partagé votre avis. Nous avons bien pris en compte votre participation.</p>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
